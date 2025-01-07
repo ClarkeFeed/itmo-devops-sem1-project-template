@@ -21,9 +21,9 @@ for var in "${REQUIRED_VARS[@]}"; do
     fi
 done
 
-#echo "Устанавливаем зависимости Go..."
-#go mod tidy
-#echo "Зависимости установлены"
+echo "Устанавливаем зависимости Go..."
+go mod tidy
+echo "Зависимости установлены"
 
 if ! command -v psql &> /dev/null
 then
