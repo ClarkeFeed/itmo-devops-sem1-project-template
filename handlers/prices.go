@@ -67,7 +67,7 @@ func PostPrices(db *sql.DB) http.HandlerFunc {
         var validRecords []PriceData
 
         for _, zf := range zipReader.File {
-            if filepath.Base(zf.Name) != "data.csv" {
+            if filepath.Ext(zf.Name) != ".csv" {
                 continue
             }
             csvFile, err := zf.Open()
